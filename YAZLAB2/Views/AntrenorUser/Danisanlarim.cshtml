@@ -1,0 +1,67 @@
+﻿@model IEnumerable<YAZLAB2.Models.Danısan>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_AntrenorLayout";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.adsoyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hedefler)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.boy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kilo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bmi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.yagorani)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.adsoyad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.hedefler)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.boy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.kilo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.bmi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.yagorani)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<YAZLAB2.Models.DietPlan>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_DanisanLayout";
+}
+
+<h1>Index</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.danisan_adsoyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hedefler)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.danisan_adsoyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hedefler)
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

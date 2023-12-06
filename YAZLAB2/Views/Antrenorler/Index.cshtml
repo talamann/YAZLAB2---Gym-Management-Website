@@ -1,0 +1,53 @@
+﻿@model IEnumerable<YAZLAB2.Models.Antrenor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.adsoyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uzmanliklar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.deneyim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.iletisim)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.adsoyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uzmanliklar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.deneyim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.iletisim)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

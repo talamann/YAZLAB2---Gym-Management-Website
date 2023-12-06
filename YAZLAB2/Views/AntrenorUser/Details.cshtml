@@ -1,0 +1,43 @@
+﻿@model YAZLAB2.Models.Antrenor
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "_AntrenorLayout";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Antrenor</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.adsoyad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.adsoyad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.uzmanliklar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.uzmanliklar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.deneyim)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.deneyim)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.iletisim)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.iletisim)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,53 @@
+﻿@model YAZLAB2.Models.Kullanici
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Kullanici</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="id" class="control-label"></label>
+                <input asp-for="id" class="form-control" />
+                <span asp-validation-for="eposta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="eposta" class="control-label"></label>
+                <input asp-for="eposta" class="form-control" />
+                <span asp-validation-for="eposta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="adsoyad" class="control-label"></label>
+                <input asp-for="adsoyad" class="form-control" />
+                <span asp-validation-for="adsoyad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sifre" class="control-label"></label>
+                <input asp-for="sifre" class="form-control" />
+                <span asp-validation-for="sifre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="rol" class="control-label"></label>
+                <input asp-for="rol" class="form-control" />
+                <span asp-validation-for="rol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,61 @@
+﻿@model YAZLAB2.Models.Danısan
+
+@{
+    ViewData["Title"] = "DanisanIndex";
+    Layout = "_DanisanLayout.cshtml";
+}
+
+<h1>Bilgilerim</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.adsoyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hedefler)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.boy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kilo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bmi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.yagorani)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(item => item.adsoyad)
+            </td>
+            <td>
+                @Html.DisplayFor(item => item.hedefler)
+            </td>
+            <td>
+                @Html.DisplayFor(item => item.boy)
+            </td>
+            <td>
+                @Html.DisplayFor(item => item.kilo)
+            </td>
+            <td>
+                @Html.DisplayFor(item => item.bmi)
+            </td>
+            <td>
+                @Html.DisplayFor(item => item.yagorani)
+            </td>
+            <td>
+                <a asp-controller="DanisanUser" asp-action="Edit" asp-route-id="@Model?.id">Edit</a> | |
+            </td>
+        </tr>
+    </tbody>
+</table>

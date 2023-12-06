@@ -1,0 +1,42 @@
+﻿@model IEnumerable<YAZLAB2.Models.Eslesmeler>
+
+@{
+    ViewData["Title"] = "Egitmenlerim";
+    Layout = "_DanisanLayout";
+}
+
+<h1>Eslesmeler</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.antrenor_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.antrenor_adsoyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.alan)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.antrenor_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.antrenor_adsoyad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.alan)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

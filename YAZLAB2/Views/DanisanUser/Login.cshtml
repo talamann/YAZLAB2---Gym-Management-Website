@@ -1,0 +1,55 @@
+﻿@model YAZLAB2.Models.Kullanici
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_NoLoginLayout";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Yazlab GYM</h1>
+    <p><a href="https://www.youtube.com/watch?v=852rGXEa5wQ">BECOME THE OVERMAN</a>.</p>
+
+    <!-- Login Form -->
+    <div class="container mt-4">
+        <h2>Login</h2>
+        <form asp-controller="DanisanUser" asp-action="LoginUser" method="get">
+            <div class="form-group">
+                <label for="loginID">ID:</label>
+                <input type="texT" class="form-control" id="ID" name="id" required>
+            </div>
+            <div class="form-group">
+
+                <label for="loginPassword">Password:</label>
+                <input type="password" class="form-control" id="loginPassword" name="sifre" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+
+    <!-- Register Form -->
+    <div class="container mt-4">
+        <h2>Register</h2>
+        <form asp-controller="DanisanUser" asp-action="RegisterUser" method="post">
+            <div class="form-group">
+                <label for="registerID">ID:</label>
+                <input type="text" class="form-control" id="registerID" name="ID" required>
+            </div>
+            <div class="form-group">
+                <label for="registerEmail">eposta:</label>
+                <input type="email" class="form-control" id="registerEmail" name="eposta" required>
+            </div>
+            <div class="form-group">
+                <label for="registerAdsoyad">Adsoyad:</label>
+                <input type="text" class="form-control" id="registerAdsoyad" name="adsoyad" required>
+            </div>
+            <div class="form-group">
+                <label for="registerPassword">Sifre:</label>
+                <input type="password" class="form-control" id="registerPassword" name="sifre" required>
+            </div>
+            <div class="form-group">
+                <label for="registerPassword">rol:</label>
+                <input type="text" class="form-control" id="registerRol" name="rol" required>
+            </div>
+            <button type="submit" class="btn btn-success">Register</button>
+        </form>
+    </div>
+</div>

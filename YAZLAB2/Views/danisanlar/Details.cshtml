@@ -1,0 +1,54 @@
+﻿@model YAZLAB2.Models.Danısan
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Danısan</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.adsoyad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.adsoyad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.hedefler)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.hedefler)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.boy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.boy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.kilo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.kilo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bmi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bmi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.yagorani)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.yagorani)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
